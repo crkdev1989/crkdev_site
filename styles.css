@@ -57,8 +57,8 @@ a:hover{
   background: rgba(4,8,19,.75);
   border-bottom:1px solid var(--border);
   z-index:10;
-  padding-top:10px;
-  padding-bottom:10px;
+  padding-top:6px;
+  padding-bottom:6px;
 }
 
 
@@ -362,4 +362,8 @@ a:hover{
     padding-top:6px;
     padding-bottom:6px;
   }
+}
+.section:nth-child(even){
+  background: rgba(255,255,255,.015);
+  border-radius: var(--radius);
 }
