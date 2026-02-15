@@ -306,3 +306,24 @@ a:hover{
     font-size:14px;
   }
 }
+.accordion{
+  margin-top:12px;
+  border:1px solid var(--border);
+  border-radius: var(--radius);
+  padding:12px 14px;
+  background: rgba(255,255,255,.02);
+}
+
+.accordion summary{
+  cursor:pointer;
+  font-weight:800;
+  color: var(--text);
+}
+
+.accordion p{
+  margin:10px 0 10px;
+}
+
+.accordion[open]{
+  background: rgba(255,255,255,.03);
+}
