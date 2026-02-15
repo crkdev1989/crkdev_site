@@ -50,26 +50,34 @@ a:hover{
   display:flex;
   align-items:center;
   justify-content:space-between;
+  gap:20px;
   position:sticky;
   top:0;
   backdrop-filter: blur(10px);
   background: rgba(4,8,19,.75);
   border-bottom:1px solid var(--border);
   z-index:10;
+  padding-top:10px;
+  padding-bottom:10px;
 }
+
 
 .brand img{
   height:90px;
   width:auto;
   display:block;
+  filter: drop-shadow(0 0 8px rgba(46,169,230,.25));
 }
+
 
 
 
 .nav{
   display:flex;
-  gap:16px;
+  gap:18px;
+  align-items:center;
 }
+
 
 .nav a{
   color:var(--muted);
@@ -344,4 +352,14 @@ a:hover{
 
 .accordion[open] summary::before{
   content: "▼";
+}
+@media (max-width: 900px){
+  .brand img{
+    height:60px;
+  }
+
+  .header{
+    padding-top:6px;
+    padding-bottom:6px;
+  }
 }
