@@ -53,7 +53,7 @@ a:hover{
   position:sticky;
   top:0;
   backdrop-filter: blur(10px);
-  background: rgba(11,15,23,.65);
+  background: rgba(4,8,19,.75);
   border-bottom:1px solid var(--border);
   z-index:10;
 }
