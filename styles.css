@@ -327,3 +327,20 @@ a:hover{
 .accordion[open]{
   background: rgba(255,255,255,.03);
 }
+.accordion summary{
+  cursor:pointer;
+  font-weight:800;
+  color: var(--text);
+  list-style: none;
+}
+
+.accordion summary::before{
+  content: "▶";
+  margin-right:8px;
+  color: var(--accent);
+  font-size:12px;
+}
+
+.accordion[open] summary::before{
+  content: "▼";
+}
