@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Case Studies — CRK Dev LLC</title>
+  <meta name="description" content="Case studies from CRK Dev LLC: CSV cleaning, web scraping, data extraction, and automation pipelines built with Python." />
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+
+<body>
+  <!-- Shared Header -->
+  <header class="container header">
+    <div class="brand">
+      <a href="/" aria-label="CRK Dev Home">
+        <img src="/assets/logo4.png" alt="CRK Dev LLC Logo">
+      </a>
+    </div>
+
+    <nav class="nav">
+      <a href="/">Home</a>
+      <a href="/case-studies/" aria-current="page">Case Studies</a>
+      <a href="/portfolio/">Portfolio</a>
+      <a href="/hire-me/">Hire Me</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="container hero">
+      <div class="hero-copy">
+        <h1>Case Studies</h1>
+        <p class="subhead">
+          Real examples of data cleaning, web scraping, and automation work — with demos, screenshots, and clear deliverables.
+        </p>
+
+        <div class="cta-row">
+          <a class="btn primary" href="/hire-me/">Start a Project</a>
+          <a class="btn ghost" href="/portfolio/">See Portfolio</a>
+        </div>
+
+        <div class="trust">
+          <span>Clear scope</span>
+          <span>Clean outputs</span>
+          <span>Fast turnaround</span>
+          <span>NDA-friendly</span>
+        </div>
+      </div>
+
+      <div class="hero-card">
+        <div class="card">
+          <div class="card-title">What you’ll find here</div>
+          <ul class="list">
+            <li>✅ What the problem was</li>
+            <li>✅ What was built</li>
+            <li>✅ Demo video + screenshots</li>
+            <li>✅ Deliverables & results</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- SUB NAV (Case Study Tabs) -->
+    <section class="container section">
+      <div class="card">
+        <h2 style="margin-bottom:10px;">Browse</h2>
+        <div class="cta-row">
+          <a class="btn ghost" href="/case-studies/csv-cleaner/">CSV Cleaner</a>
+          <a class="btn ghost" href="/case-studies/web-scraper/">Web Scraper</a>
+          <a class="btn ghost" href="/case-studies/data-extraction/">Data Extraction</a>
+          <a class="btn ghost" href="/case-studies/">All</a>
+        </div>
+        <p class="muted" style="margin-top:10px;">
+          New case studies get added as tools and client-style demos are completed.
+        </p>
+      </div>
+    </section>
+
+    <!-- CASE STUDY CARDS -->
+    <section class="container section">
+      <h2>Featured</h2>
+
+      <div class="grid3">
+        <!-- CSV CLEANER -->
+        <div class="card">
+          <h3>CSV Cleaner Automation</h3>
+          <p>
+            Python pipeline to standardize messy CSV files: trim whitespace, normalize text, handle duplicates,
+            and export clean outputs.
+          </p>
+
+          <div class="proof-label" style="margin-top:10px;">Highlights</div>
+          <ul class="list">
+            <li>✅ Dedupe + formatting</li>
+            <li>✅ Column-aware cleaning</li>
+            <li>✅ Clean CSV/Excel-ready output</li>
+          </ul>
+
+          <div class="cta-row" style="margin-top:10px;">
+            <a class="btn primary" href="/case-studies/csv-cleaner/">View Case Study →</a>
+          </div>
+        </div>
+
+        <!-- WEB SCRAPER -->
+        <div class="card">
+          <h3>Web Scraping Pipeline</h3>
+          <p>
+            Extract structured data from websites into clean CSV/JSON deliverables with clear field definitions
+            and consistent formatting.
+          </p>
+
+          <div class="proof-label" style="margin-top:10px;">Highlights</div>
+          <ul class="list">
+            <li>✅ Field mapping</li>
+            <li>✅ Source URLs included</li>
+            <li>✅ Clean dataset delivery</li>
+          </ul>
+
+          <div class="cta-row" style="margin-top:10px;">
+            <a class="btn primary" href="/case-studies/web-scraper/">View Case Study →</a>
+          </div>
+        </div>
+
+        <!-- DATA EXTRACTION -->
+        <div class="card">
+          <h3>Data Extraction (Coming Next)</h3>
+          <p>
+            A focused case study showing a repeatable extraction workflow: define fields, validate outputs,
+            and deliver clean files ready for use.
+          </p>
+
+          <div class="proof-label" style="margin-top:10px;">Planned content</div>
+          <ul class="list">
+            <li>✅ Input → output examples</li>
+            <li>✅ Validation + QA checklist</li>
+            <li>✅ Deliverables + results</li>
+          </ul>
+
+          <div class="cta-row" style="margin-top:10px;">
+            <a class="btn ghost" href="/hire-me/">Request this build →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="container section">
+      <div class="contact card">
+        <h2>Want results like this?</h2>
+        <p class="muted">
+          Send your file or target site + what “done” looks like. I’ll reply with a plan, timeline, and price.
+        </p>
+
+        <div class="cta-row">
+          <a class="btn primary" href="/hire-me/">Hire Me</a>
+          <a class="btn ghost" href="mailto:Craig@crkdev.com?subject=CRK%20Dev%20Case%20Study%20Request">Email</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="container footer">
+    <div>© <span id="year"></span> CRK Dev LLC</div>
+    <div class="footer-right">
+      <a href="/hire-me/">Hire Me</a>
+      <a href="/">Home</a>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
