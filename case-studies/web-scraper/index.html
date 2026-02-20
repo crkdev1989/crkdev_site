@@ -3,14 +3,13 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Web Scraper Case Study — CRK Dev LLC</title>
-  <meta name="description" content="Case study: a Python web scraping pipeline that extracts structured data from websites and delivers clean CSV/JSON outputs with validation and a summary report." />
-
-  <!-- IMPORTANT: absolute path for nested pages -->
+  <title>Web Scraping Pipeline — Case Study | CRK Dev LLC</title>
+  <meta name="description" content="Case study: A Python-based web scraping pipeline that extracts structured data from websites and delivers clean CSV/JSON outputs with validation and clear summaries." />
   <link rel="stylesheet" href="/styles.css" />
 </head>
 
 <body>
+  <!-- Shared Header -->
   <header class="container header">
     <div class="brand">
       <a href="/" aria-label="CRK Dev Home">
@@ -30,247 +29,259 @@
     <!-- HERO -->
     <section class="container hero">
       <div class="hero-copy">
-        <h1>Case Study: Web Scraping / Data Extraction</h1>
+        <h1>Web Scraping / Data Extraction Pipeline</h1>
         <p class="subhead">
-          A reusable Python scraping pipeline that collects structured website data and delivers clean CSV/JSON outputs —
-          with clear fields, clear scope, and reliable results.
+          A Python pipeline that extracts structured data from websites and delivers clean, standardized CSV/JSON outputs —
+          with validation, deduplication, and a clear summary of what was captured.
         </p>
 
         <div class="cta-row">
-          <a class="btn primary" href="/hire-me/">Get a Quote</a>
+          <a class="btn primary" href="/hire-me/">Request a Quote</a>
           <a class="btn ghost" href="/case-studies/">Back to Case Studies</a>
         </div>
 
         <div class="trust">
-          <span>Scope-first</span>
-          <span>Validation built-in</span>
-          <span>Clean deliverables</span>
+          <span>Clear scope</span>
+          <span>Reliable output</span>
+          <span>Fast turnaround</span>
           <span>NDA-friendly</span>
         </div>
       </div>
 
       <div class="hero-card">
         <div class="card">
-          <div class="card-title">Deliverables (Typical)</div>
+          <div class="card-title">Deliverables</div>
           <ul class="list">
             <li>✅ Scraped dataset (CSV / JSON)</li>
             <li>✅ Cleaned fields + standardized headers</li>
-            <li>✅ Dedupe + basic validation</li>
-            <li>✅ Summary report (counts + notes)</li>
+            <li>✅ Validation + dedupe rules (as needed)</li>
+            <li>✅ Summary of what was extracted</li>
           </ul>
         </div>
       </div>
     </section>
 
-    <!-- QUICK SUMMARY -->
+    <!-- QUICK NAV (within this page) -->
     <section class="container section">
-      <h2>Project Summary</h2>
-      <p class="muted">
-        This case study describes a general-purpose scraping pipeline used to extract business / listing-style data from websites.
-        Exact sources and client data are anonymized.
-      </p>
-
-      <div class="grid3">
-        <div class="card">
-          <h3>Goal</h3>
-          <p>Turn website listings into structured rows with consistent columns ready for Excel/CRM/import tools.</p>
-        </div>
-        <div class="card">
-          <h3>Constraints</h3>
-          <p>Respect site rules and request limits, avoid sensitive/private data, and keep output reproducible.</p>
-        </div>
-        <div class="card">
-          <h3>Outcome</h3>
-          <p>Clean output delivered as CSV/JSON with a short report: totals, skipped rows, and field coverage.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- PROBLEM / SOLUTION / RESULT -->
-    <section class="container section">
-      <h2>Problem → Solution → Result</h2>
-
-      <div class="grid3">
-        <div class="card">
-          <h3>Problem</h3>
-          <p>
-            The client needed structured data from a website that was only available as human-readable pages.
-            Manual copy/paste was too slow and error-prone.
-          </p>
-        </div>
-
-        <div class="card">
-          <h3>Solution</h3>
-          <p>
-            Build a Python pipeline that collects the target pages, extracts the requested fields,
-            normalizes them, and exports a clean dataset.
-          </p>
-        </div>
-
-        <div class="card">
-          <h3>Result</h3>
-          <p>
-            A consistent dataset (CSV/JSON) ready to use, plus a summary of what was extracted and what was missing/invalid.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- WHAT WAS EXTRACTED -->
-    <section class="container section">
-      <h2>Fields Extracted</h2>
-      <p class="muted">Example schema (varies per project). This is the format clients usually ask for:</p>
-
-      <div class="grid3">
-        <div class="card">
-          <h3>Core</h3>
-          <ul class="list">
-            <li>• Name / Title</li>
-            <li>• Category</li>
-            <li>• Address / City / State</li>
-            <li>• Phone</li>
-            <li>• Website URL</li>
-          </ul>
-        </div>
-
-        <div class="card">
-          <h3>Extended</h3>
-          <ul class="list">
-            <li>• Email (if publicly listed)</li>
-            <li>• Social links</li>
-            <li>• Hours</li>
-            <li>• Ratings / review count</li>
-            <li>• Notes / tags</li>
-          </ul>
-        </div>
-
-        <div class="card">
-          <h3>Metadata</h3>
-          <ul class="list">
-            <li>• Source page URL</li>
-            <li>• Timestamp (run time)</li>
-            <li>• Row status (ok/skipped)</li>
-            <li>• Error reason (if skipped)</li>
-            <li>• Deduplication key</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <!-- PIPELINE -->
-    <section class="container section">
-      <h2>How the Pipeline Works</h2>
-      <div class="grid3">
-        <div class="card">
-          <div class="step">1</div>
-          <h3>Collect</h3>
-          <p>Gather target URLs (seed pages, pagination, or an input list) and fetch pages safely within agreed limits.</p>
-        </div>
-
-        <div class="card">
-          <div class="step">2</div>
-          <h3>Extract</h3>
-          <p>Parse HTML and map page elements to a defined schema (the columns/fields you want in the output).</p>
-        </div>
-
-        <div class="card">
-          <div class="step">3</div>
-          <h3>Clean + Export</h3>
-          <p>Normalize text, validate key fields, dedupe, then export to CSV/JSON plus a short summary report.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- TECH + RELIABILITY -->
-    <section class="container section">
-      <h2>Tech Stack & Reliability</h2>
-
-      <div class="grid3">
-        <div class="card">
-          <h3>Tools</h3>
-          <ul class="list">
-            <li>• Python</li>
-            <li>• Requests / HTTP client</li>
-            <li>• BeautifulSoup (HTML parsing)</li>
-            <li>• CSV / JSON exports</li>
-          </ul>
-        </div>
-
-        <div class="card">
-          <h3>Quality Checks</h3>
-          <ul class="list">
-            <li>• Required-field validation</li>
-            <li>• Consistent column order</li>
-            <li>• Deduplication rules</li>
-            <li>• Basic formatting + trimming</li>
-          </ul>
-        </div>
-
-        <div class="card">
-          <h3>Deliverables</h3>
-          <ul class="list">
-            <li>• Output file(s): CSV/JSON</li>
-            <li>• Summary report (counts)</li>
-            <li>• Notes on edge cases</li>
-            <li>• Clear rerun instructions</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <!-- COMPLIANCE / ETHICS -->
-    <section class="container section">
-      <h2>Notes on Scope & Site Rules</h2>
       <div class="card">
-        <p class="muted" style="margin-bottom:10px;">
-          I only extract data that is publicly available and within the agreed scope.
-          If a source requires an account/subscription or restricts automated access, I’ll recommend compliant alternatives.
+        <div class="cta-row">
+          <a class="btn ghost" href="#overview">Overview</a>
+          <a class="btn ghost" href="#demo">Demo</a>
+          <a class="btn ghost" href="#before-after">Before/After</a>
+          <a class="btn ghost" href="#results">Results</a>
+          <a class="btn ghost" href="#deliverables">Downloads</a>
+        </div>
+        <p class="muted" style="margin-top:10px;">
+          Tip: This page is linkable for LinkedIn, Upwork, Fiverr, and proposals.
         </p>
+      </div>
+    </section>
+
+    <!-- OVERVIEW -->
+    <section id="overview" class="container section">
+      <h2>Overview</h2>
+      <div class="grid3">
+        <div class="card">
+          <h3>The Problem</h3>
+          <p>
+            Many sites present useful information as human-readable pages (directories, listings, catalogs) —
+            but clients need that information in a structured format for Excel, CRMs, reporting, or automation.
+          </p>
+        </div>
+        <div class="card">
+          <h3>The Goal</h3>
+          <p>
+            Create a repeatable, scope-first scraping workflow that extracts the requested fields accurately,
+            keeps the dataset consistent, and delivers clean outputs without manual copy/paste.
+          </p>
+        </div>
+        <div class="card">
+          <h3>The Solution</h3>
+          <p>
+            A Python-based Web Scraper Engine that collects target pages, extracts fields to a defined schema,
+            validates key columns, deduplicates, and exports clean CSV/JSON with a summary report.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHAT IT DOES -->
+    <section class="container section">
+      <h2>What the Web Scraper Does</h2>
+
+      <div class="card">
+        <div class="proof-grid" style="margin-top:6px;">
+          <div>
+            <div class="proof-label">Extraction / Parsing</div>
+            <ul class="list">
+              <li>✅ Collect target URLs (seed pages + pagination)</li>
+              <li>✅ Extract requested fields into rows (schema-driven)</li>
+              <li>✅ Capture source URL per row (traceability)</li>
+              <li>✅ Handle common edge cases (missing fields)</li>
+            </ul>
+          </div>
+
+          <div>
+            <div class="proof-label">Cleaning / Validation</div>
+            <ul class="list">
+              <li>✅ Normalize casing/whitespace (as needed)</li>
+              <li>✅ Standardize headers and formats</li>
+              <li>✅ Validate required fields (optional rules)</li>
+              <li>✅ Dedupe by exact match or key columns</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="proof-label" style="margin-top:14px;">Typical Outputs</div>
         <ul class="list">
-          <li>• Respect request limits and site policies when applicable.</li>
-          <li>• Avoid private, sensitive, or gated data.</li>
-          <li>• Prefer clear, reproducible outputs over “one-off” scraping.</li>
+          <li>✅ Clean CSV and/or JSON output</li>
+          <li>✅ Brief summary: pages scanned, rows extracted, skipped/failed rows</li>
+          <li>✅ Optional: “issues” log (missing required fields / parse errors)</li>
         </ul>
       </div>
     </section>
 
-    <!-- PROOF PLACEHOLDERS -->
-    <section class="container section">
-      <h2>Screenshots / Proof</h2>
-      <p class="muted">Add visuals here when ready (demo video, sample output screenshot, or a redacted dataset preview).</p>
+    <!-- DEMO -->
+    <section id="demo" class="container section">
+      <h2>Demo Video</h2>
+      <div class="card">
+        <p class="muted">
+        </p>
+
+        <!-- ✅ Replace the iframe below with your actual embed -->
+        <div style="margin-top:12px;">
+          <div class="card" style="padding:0; overflow:hidden;">
+            <!-- Example embed (replace src) -->
+            <iframe
+              width="100%"
+              height="420"
+              src="https://www.youtube.com/embed/VIDEO_ID_HERE"
+              title="Web Scraper Demo"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+              style="display:block;"
+            ></iframe>
+          </div>
+        </div>
+
+        <div class="cta-row" style="margin-top:12px;">
+          <!-- Optional: link to the video page if you want -->
+          <!-- <a class="btn ghost" href="https://youtu.be/VIDEO_ID" target="_blank" rel="noopener">Open Demo in New Tab</a> -->
+          <a class="btn ghost" href="/hire-me/">Want this for your project? →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- BEFORE / AFTER -->
+    <section id="before-after" class="container section">
+      <h2>Before / After</h2>
+      <div class="card">
+        <p class="muted">
+        </p>
+
+        <div class="proof-grid" style="margin-top:12px;">
+          <div>
+            <div class="proof-label">Before (Website Pages)</div>
+            <div class="card" style="margin-top:10px;">
+              <img
+                src="/assets/case-studies/web-scraper/before.png"
+                alt="Before: website listings/pages"
+                style="width:100%; height:auto; display:block; border-radius:12px;"
+              />
+            </div>
+          </div>
+
+          <div>
+            <div class="proof-label">After (Structured Output)</div>
+            <div class="card" style="margin-top:10px;">
+              <img
+                src="/assets/case-studies/web-scraper/after.png"
+                alt="After: scraped dataset output"
+                style="width:100%; height:auto; display:block; border-radius:12px;"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RESULTS -->
+    <section id="results" class="container section">
+      <h2>Results</h2>
 
       <div class="grid3">
         <div class="card">
-          <h3>Sample Output</h3>
-          <p class="muted">Screenshot placeholder — cleaned CSV/Excel columns.</p>
+          <h3>Speed</h3>
+          <p>Extracts large sets of structured rows far faster than manual copy/paste or browsing.</p>
         </div>
         <div class="card">
-          <h3>Run Summary</h3>
-          <p class="muted">Placeholder — totals extracted, skipped rows, missing fields.</p>
+          <h3>Consistency</h3>
+          <p>Standardized columns and formatting make data ready for Excel, imports, reporting, or automation.</p>
         </div>
         <div class="card">
-          <h3>Pipeline Diagram</h3>
-          <p class="muted">Placeholder — Collect → Extract → Clean → Export.</p>
+          <h3>Reusability</h3>
+          <p>A pipeline approach allows repeat runs as new pages appear or as the client updates scope.</p>
+        </div>
+      </div>
+
+      <div class="card" style="margin-top:14px;">
+        <h3>What clients typically care about</h3>
+        <ul class="list">
+          <li>✅ “Are the fields extracted consistently across all pages?”</li>
+          <li>✅ “Can I trust the output (source URL + validation)?”</li>
+          <li>✅ “Are duplicates handled correctly for my use case?”</li>
+          <li>✅ “Can we rerun this weekly/monthly with the same rules?”</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- DOWNLOADS / DELIVERABLES -->
+    <section id="deliverables" class="container section">
+      <h2>Downloads</h2>
+
+      <div class="card">
+        <p class="muted">
+        </p>
+
+        <div class="proof-grid" style="margin-top:12px;">
+          <div>
+            <div class="proof-label">Sample Input</div>
+            <ul class="list">
+              <li>✅ Example: URL list (or seed page) for scraping</li>
+              <li>✅ Demonstrates target fields + schema expectations</li>
+            </ul>
+            <div class="cta-row" style="margin-top:10px;">
+              <a class="btn ghost" href="/samples/web-scraper-input-sample.txt" download>Download Input Sample</a>
+            </div>
+          </div>
+
+          <div>
+            <div class="proof-label">Sample Output</div>
+            <ul class="list">
+              <li>✅ Structured rows with consistent columns</li>
+              <li>✅ Cleaned + deduped (as needed)</li>
+            </ul>
+            <div class="cta-row" style="margin-top:10px;">
+              <a class="btn ghost" href="/samples/web-scraper-output-sample.csv" download>Download Output Sample</a>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- CTA -->
-    <section id="contact" class="container section">
+    <section class="container section">
       <div class="contact card">
-        <h2>Want something like this built for your workflow?</h2>
-        <p class="muted">Send the site, fields you want, and the output format. I’ll reply with a plan + timeline.</p>
+        <h2>Need data extracted from a website?</h2>
+        <p class="muted">
+          Send the site + the fields you want + your output format (CSV/Excel/JSON). I’ll reply with scope, timeline, and price.
+        </p>
 
         <div class="cta-row">
           <a class="btn primary" href="/hire-me/">Hire Me</a>
-          <a class="btn ghost" href="tel:+14103391935">(410) 339-1935</a>
-        </div>
-
-        <div class="links">
-          <a href="https://www.fiverr.com/crkdev1989" target="_blank" rel="noopener">Fiverr</a>
-          <a href="https://www.upwork.com/freelancers/~0157e5b65e131ad1ea" target="_blank" rel="noopener">Upwork</a>
-          <a href="https://www.linkedin.com/in/craig-kelley-9122ab388/" target="_blank" rel="noopener">LinkedIn</a>
-          <a href="https://github.com/crkdev1989" target="_blank" rel="noopener">GitHub</a>
+          <a class="btn ghost" href="mailto:Craig@crkdev.com?subject=Web%20Scraping%20Project%20Request">Email</a>
+          <a class="btn ghost" href="tel:+14103391935">Call: (410) 339-1935</a>
         </div>
       </div>
     </section>
@@ -279,8 +290,8 @@
   <footer class="container footer">
     <div>© <span id="year"></span> CRK Dev LLC</div>
     <div class="footer-right">
-      <a href="/hire-me/">Hire Me</a>
       <a href="/case-studies/">Case Studies</a>
+      <a href="/hire-me/">Hire Me</a>
     </div>
   </footer>
 
