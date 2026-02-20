@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Hire Me — CRK Dev LLC</title>
+  <meta name="description" content="Hire CRK Dev LLC for CSV cleaning, web scraping, data extraction, and Python automation. Fast turnaround. Clear scope. Reliable output." />
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+
+<body>
+  <!-- Shared Header -->
+  <header class="container header">
+    <div class="brand">
+      <a href="/" aria-label="CRK Dev Home">
+        <img src="/assets/logo4.png" alt="CRK Dev LLC Logo">
+      </a>
+    </div>
+
+    <nav class="nav">
+      <a href="/">Home</a>
+      <a href="/case-studies/">Case Studies</a>
+      <a href="/portfolio/">Portfolio</a>
+      <a href="/hire-me/" aria-current="page">Hire Me</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="container hero">
+      <div class="hero-copy">
+        <h1>Hire Me</h1>
+        <p class="subhead">
+          Send a sample file or target site + what “done” looks like. I’ll reply with a clear plan, timeline, and price.
+        </p>
+
+        <div class="cta-row">
+          <a class="btn primary" href="mailto:Craig@crkdev.com?subject=CRK%20Dev%20Project%20Request">Email to Start</a>
+          <a class="btn ghost" href="tel:+14103391935">Call: (410) 339-1935</a>
+        </div>
+
+        <div class="trust">
+          <span>Clear scope</span>
+          <span>Fast turnaround</span>
+          <span>Fixed-price or hourly</span>
+          <span>NDA-friendly</span>
+        </div>
+      </div>
+
+      <div class="hero-card">
+        <div class="card">
+          <div class="card-title">Best-fit work</div>
+          <ul class="list">
+            <li>✅ CSV cleaning (dedupe, formatting, validation)</li>
+            <li>✅ Web scraping / data extraction (CSV/JSON)</li>
+            <li>✅ Automation scripts (Python workflows)</li>
+            <li>✅ Conversions (CSV ⇄ Excel ⇄ JSON)</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section class="container section">
+      <h2>How it works</h2>
+      <div class="grid3">
+        <div class="card">
+          <div class="step">1</div>
+          <h3>Send sample + goal</h3>
+          <p>Share a sample file (or site link) and tell me what output you want.</p>
+        </div>
+        <div class="card">
+          <div class="step">2</div>
+          <h3>I confirm scope</h3>
+          <p>You get a clear plan, timeline, and price before any work starts.</p>
+        </div>
+        <div class="card">
+          <div class="step">3</div>
+          <h3>Delivery + revisions</h3>
+          <p>Clean deliverables + a short summary. Revisions included for agreed scope.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- INTAKE FORM -->
+    <section class="container section">
+      <h2>Project Intake</h2>
+      <div class="card">
+        <p class="muted">
+          Fill this out and click “Generate Email.” It will open your email client with everything pre-written.
+          Attach your file(s) and send.
+        </p>
+
+        <!-- Note: Using a basic form + JS to create a mailto draft.
+             This works on a static site without a backend. -->
+        <form id="intakeForm" style="margin-top:14px;">
+          <div class="proof-grid">
+            <div>
+              <label class="proof-label" for="name">Name</label>
+              <input id="name" name="name" type="text" required
+                     style="width:100%; margin-top:6px; padding:12px; border-radius:12px; border:1px solid rgba(255,255,255,0.12); background:rgba(255,255,255,0.04); color:inherit;">
+            </div>
+
+            <div>
+              <label class="proof-label" for="email">Email</label>
+              <input id="email" name="email" type="email" required
+                     style="width:100%; margin-top:6px; padding:12px; border-radius:12px; border:1px solid rgba(255,255,255,0.12); background:rgba(255,255,255,0.04); color:inherit;">
+            </div>
+          </div>
+
+          <div style="margin-top:12px;">
+            <label class="proof-label" for="service">Service Needed</label>
+            <select id="service" name="service" required
+                    style="width:100%; margin-top:6px; padding:12px; border-radius:12px; border:1px solid rgba(255,255,255,0.12); background:rgba(255,255,255,0.04); color:inherit;">
+              <option value="" disabled selected>Select one...</option>
+              <option>CSV Cleaning / Formatting</option>
+              <option>Web Scraping</option>
+              <option>Data Extraction</option>
+              <option>Automation Script</option>
+              <option>Other</option>
+            </select>
+          </div>
+
+          <div class="proof-grid" style="margin-top:12px;">
+            <div>
+              <label class="proof-label" for="source">Source (file/site/app)</label>
+              <input id="source" name="source" type="text" placeholder="e.g., Excel export, Shopify report, website URL"
+                     style="width:100%; margin-top:6px; padding:12px; border-radius:12px; border:1px solid rgba(255,255,255,0.12); background:rgba(255,255,255,0.04); color:inherit;">
+            </div>
+
+            <div>
+              <label class="proof-label" for="size">Approx size</label>
+              <input id="size" name="size" type="text" placeholder="e.g., 20k rows, 5 files, 200 pages"
+                     style="width:100%; margin-top:6px; padding:12px; border-radius:12px; border:1px solid rgba(255,255,255,0.12); background:rgba(255,255,255,0.04); color:inherit;">
+            </div>
+          </div>
+
+          <div class="proof-grid" style="margin-top:12px;">
+            <div>
+              <label class="proof-label" for="output">Desired output</label>
+              <select id="output" name="output"
+                      style="width:100%; margin-top:6px; padding:12px; border-radius:12px; border:1px solid rgba(255,255,255,0.12); background:rgba(255,255,255,0.04); color:inherit;">
+                <option>CSV</option>
+                <option>Excel</option>
+                <option>JSON</option>
+                <option>Google Sheet</option>
+                <option>Not sure</option>
+              </select>
+            </div>
+
+            <div>
+              <label class="proof-label" for="deadline">Deadline</label>
+              <input id="deadline" name="deadline" type="text" placeholder="e.g., ASAP, Friday, next week"
+                     style="width:100%; margin-top:6px; padding:12px; border-radius:12px; border:1px solid rgba(255,255,255,0.12); background:rgba(255,255,255,0.04); color:inherit;">
+            </div>
+          </div>
+
+          <div style="margin-top:12px;">
+            <label class="proof-label" for="details">Details (what “done” looks like)</label>
+            <textarea id="details" name="details" rows="6" required
+                      placeholder="Tell me what you want the final output to look like. Any columns to remove/keep? Dedupe rules? Field list for scraping?"
+                      style="width:100%; margin-top:6px; padding:12px; border-radius:12px; border:1px solid rgba(255,255,255,0.12); background:rgba(255,255,255,0.04); color:inherit; resize:vertical;"></textarea>
+          </div>
+
+          <div class="proof-grid" style="margin-top:12px;">
+            <div>
+              <label class="proof-label" for="budget">Budget range (optional)</label>
+              <input id="budget" name="budget" type="text" placeholder="e.g., $100-$300, hourly, not sure"
+                     style="width:100%; margin-top:6px; padding:12px; border-radius:12px; border:1px solid rgba(255,255,255,0.12); background:rgba(255,255,255,0.04); color:inherit;">
+            </div>
+            <div>
+              <label class="proof-label" for="nda">NDA needed?</label>
+              <select id="nda" name="nda"
+                      style="width:100%; margin-top:6px; padding:12px; border-radius:12px; border:1px solid rgba(255,255,255,0.12); background:rgba(255,255,255,0.04); color:inherit;">
+                <option>No</option>
+                <option>Yes</option>
+                <option>Not sure</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="cta-row" style="margin-top:16px;">
+            <button type="submit" class="btn primary" style="border:0; cursor:pointer;">Generate Email</button>
+            <a class="btn ghost" href="mailto:Craig@crkdev.com?subject=CRK%20Dev%20Project%20Request">Email manually</a>
+          </div>
+
+          <p class="muted" style="margin-top:10px;">
+            Attach files directly to the email after it opens. If you prefer, you can also send a link to your files.
+          </p>
+        </form>
+      </div>
+    </section>
+
+    <!-- FAQ / EXPECTATIONS -->
+    <section class="container section">
+      <h2>Quick FAQ</h2>
+      <div class="card">
+        <details class="accordion">
+          <summary>What do you need from me to start?</summary>
+          <p class="muted">
+            A sample file or site link, the fields you want, and what the final output should look like.
+            If you’re not sure, send what you have and I’ll ask the right questions.
+          </p>
+        </details>
+
+        <details class="accordion">
+          <summary>Can you handle large datasets?</summary>
+          <p class="muted">
+            Yes. I’ll confirm scope first and choose a safe approach based on file size and constraints.
+          </p>
+        </details>
+
+        <details class="accordion">
+          <summary>Do you work fixed price or hourly?</summary>
+          <p class="muted">
+            Either. For well-defined tasks, fixed price is usually best. For evolving scope, hourly works well.
+          </p>
+        </details>
+
+        <details class="accordion">
+          <summary>Can you sign an NDA?</summary>
+          <p class="muted">
+            Yes. I’m NDA-friendly and careful with sensitive data.
+          </p>
+        </details>
+      </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="container section">
+      <div class="contact card">
+        <h2>Ready when you are.</h2>
+        <p class="muted">Send a sample + goal and I’ll respond with a plan, timeline, and price.</p>
+
+        <div class="cta-row">
+          <a class="btn primary" href="mailto:Craig@crkdev.com?subject=CRK%20Dev%20Project%20Request">Email CRK Dev</a>
+          <a class="btn ghost" href="tel:+14103391935">(410) 339-1935</a>
+          <a class="btn ghost" href="/case-studies/">See Case Studies</a>
+        </div>
+
+        <div class="links">
+          <a href="https://www.fiverr.com/crkdev1989" target="_blank" rel="noopener">Fiverr</a>
+          <a href="https://www.upwork.com/freelancers/~0157e5b65e131ad1ea" target="_blank" rel="noopener">Upwork</a>
+          <a href="https://www.linkedin.com/in/craig-kelley-9122ab388/" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://github.com/crkdev1989" target="_blank" rel="noopener">GitHub</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="container footer">
+    <div>© <span id="year"></span> CRK Dev LLC</div>
+    <div class="footer-right">
+      <a href="/portfolio/">Portfolio</a>
+      <a href="/case-studies/">Case Studies</a>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Intake form -> opens a pre-filled email draft (works on static hosting)
+    document.getElementById("intakeForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      const name = document.getElementById("name").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const service = document.getElementById("service").value;
+      const source = document.getElementById("source").value.trim();
+      const size = document.getElementById("size").value.trim();
+      const output = document.getElementById("output").value;
+      const deadline = document.getElementById("deadline").value.trim();
+      const details = document.getElementById("details").value.trim();
+      const budget = document.getElementById("budget").value.trim();
+      const nda = document.getElementById("nda").value;
+
+      const subject = `CRK Dev Project Request — ${service}`;
+      const body =
+`Name: ${name}
+Email: ${email}
+
+Service: ${service}
+Source: ${source || "N/A"}
+Approx size: ${size || "N/A"}
+Desired output: ${output}
+Deadline: ${deadline || "N/A"}
+Budget: ${budget || "N/A"}
+NDA: ${nda}
+
+Details / What “done” looks like:
+${details}
+
+Attachments:
+- Please attach your file(s) to this email or include a share link.`;
+
+      const mailto = `mailto:Craig@crkdev.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      window.location.href = mailto;
+    });
+  </script>
+</body>
+</html>
