@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Validator Engine — Case Study | CRK Dev LLC</title>
+  <meta name="description" content="Case study: A Python-based validator engine that enforces required fields, validates formats, flags issues, and produces automation-ready outputs you can trust." />
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+
+<body>
+  <!-- Shared Header -->
+  <header class="container header">
+    <div class="brand">
+      <a href="/" aria-label="CRK Dev Home">
+        <img src="/assets/logo4.png" alt="CRK Dev LLC Logo">
+      </a>
+    </div>
+
+    <nav class="nav">
+      <a href="/">Home</a>
+      <a href="/case-studies/" aria-current="page">Case Studies</a>
+      <a href="/portfolio/">Portfolio</a>
+      <a href="/hire-me/">Hire Me</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="container hero">
+      <div class="hero-copy">
+        <h1>Validator Engine</h1>
+        <p class="subhead">
+          A modular Python validation system that enforces required fields, checks formats, flags bad rows,
+          and produces clean outputs that won’t break downstream automation.
+        </p>
+
+        <div class="cta-row">
+          <a class="btn primary" href="/hire-me/">Request a Quote</a>
+          <a class="btn ghost" href="/case-studies/">Back to Case Studies</a>
+        </div>
+
+        <div class="trust">
+          <span>Integrity-first</span>
+          <span>Reliable output</span>
+          <span>Fast turnaround</span>
+          <span>NDA-friendly</span>
+        </div>
+      </div>
+
+      <div class="hero-card">
+        <div class="card">
+          <div class="card-title">Deliverables</div>
+          <ul class="list">
+            <li>✅ Validated dataset (CSV / JSON)</li>
+            <li>✅ Rules: required fields + formats</li>
+            <li>✅ Invalid row flagging / separation</li>
+            <li>✅ Summary report (issues + counts)</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- QUICK NAV -->
+    <section class="container section">
+      <div class="card">
+        <div class="cta-row">
+          <a class="btn ghost" href="#overview">Overview</a>
+          <a class="btn ghost" href="#demo">Demo</a>
+          <a class="btn ghost" href="#before-after">Before/After</a>
+          <a class="btn ghost" href="#results">Results</a>
+          <a class="btn ghost" href="#deliverables">Downloads</a>
+        </div>
+        <p class="muted" style="margin-top:10px;"></p>
+      </div>
+    </section>
+
+    <!-- OVERVIEW -->
+    <section id="overview" class="container section">
+      <h2>Overview</h2>
+      <div class="grid3">
+        <div class="card">
+          <h3>The Problem</h3>
+          <p>
+            Automation fails when data is inconsistent: missing required values, invalid emails/URLs,
+            wrong formats, duplicates, or broken schemas.
+          </p>
+        </div>
+        <div class="card">
+          <h3>The Goal</h3>
+          <p>
+            Enforce data integrity before exports, imports, or automation steps — so clients can trust the output
+            and rerun the same rules consistently.
+          </p>
+        </div>
+        <div class="card">
+          <h3>The Solution</h3>
+          <p>
+            A Python Validator Engine that validates required fields, checks formats (regex as needed),
+            normalizes values, flags issues, and outputs a clean dataset with a summary.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHAT IT DOES -->
+    <section class="container section">
+      <h2>What the Validator Does</h2>
+
+      <div class="card">
+        <div class="proof-grid" style="margin-top:6px;">
+          <div>
+            <div class="proof-label">Rule Enforcement</div>
+            <ul class="list">
+              <li>✅ Required field checks</li>
+              <li>✅ Type/format checks (regex as needed)</li>
+              <li>✅ URL / email validation + normalization</li>
+              <li>✅ Duplicate detection rules (optional)</li>
+            </ul>
+          </div>
+
+          <div>
+            <div class="proof-label">Outputs</div>
+            <ul class="list">
+              <li>✅ Valid rows output (clean dataset)</li>
+              <li>✅ Invalid rows flagged or separated</li>
+              <li>✅ Summary report (counts + top issues)</li>
+              <li>✅ Optional issues log for review</li>
+            </ul>
+          </div>
+        </div>
+
+        <p class="muted" style="margin-top:10px;">
+          Typically used after extraction/scraping. See the <a href="/case-studies/extractor/">CRK Dev Extractor Engine</a>.
+        </p>
+      </div>
+    </section>
+
+    <!-- DEMO -->
+    <section id="demo" class="container section">
+      <h2>Demo Video</h2>
+      <div class="card">
+        <p class="muted">
+          This demo shows the Validator Engine enforcing rules after extraction: required fields, formats, and issue handling.
+        </p>
+
+        <div style="margin-top:12px;">
+          <div class="card" style="padding:0; overflow:hidden;">
+            <iframe
+              width="100%"
+              height="420"
+              src="https://www.youtube.com/embed/VIDEO_ID_HERE"
+              title="Validator Engine Demo"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+              style="display:block;"
+            ></iframe>
+          </div>
+        </div>
+
+        <div class="cta-row" style="margin-top:12px;">
+          <a class="btn ghost" href="/hire-me/">Want this for your project? →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- BEFORE / AFTER -->
+    <section id="before-after" class="container section">
+      <h2>Before / After</h2>
+      <div class="card">
+        <div class="proof-grid" style="margin-top:12px;">
+          <div>
+            <div class="proof-label">Before (Untrusted Output)</div>
+            <div class="card" style="margin-top:10px;">
+              <img
+                src="/assets/case-studies/validator/before.png"
+                alt="Before: unvalidated output"
+                style="width:100%; height:auto; display:block; border-radius:12px;"
+              />
+            </div>
+          </div>
+
+          <div>
+            <div class="proof-label">After (Validated Dataset)</div>
+            <div class="card" style="margin-top:10px;">
+              <img
+                src="/assets/case-studies/validator/after.png"
+                alt="After: validated dataset output"
+                style="width:100%; height:auto; display:block; border-radius:12px;"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RESULTS -->
+    <section id="results" class="container section">
+      <h2>Results</h2>
+
+      <div class="grid3">
+        <div class="card">
+          <h3>Reliability</h3>
+          <p>Stops broken imports and failed automations by enforcing integrity before export.</p>
+        </div>
+        <div class="card">
+          <h3>Transparency</h3>
+          <p>Clear reporting shows what failed and why — so issues are actionable, not hidden.</p>
+        </div>
+        <div class="card">
+          <h3>Repeatability</h3>
+          <p>Rules can be reused across runs (weekly/monthly) with consistent results.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- DOWNLOADS -->
+    <section id="deliverables" class="container section">
+      <h2>Downloads</h2>
+
+      <div class="card">
+        <div class="proof-grid" style="margin-top:12px;">
+          <div>
+            <div class="proof-label">Case Study PDF</div>
+            <ul class="list">
+              <li>✅ Printable documentation version</li>
+              <li>✅ Rules + workflow + outcomes</li>
+            </ul>
+            <div class="cta-row" style="margin-top:10px;">
+              <a class="btn ghost" href="/assets/case-studies/validator/validator-case-study.pdf" download>Download PDF</a>
+            </div>
+          </div>
+
+          <div>
+            <div class="proof-label">Sample Output</div>
+            <ul class="list">
+              <li>✅ Example validated output</li>
+              <li>✅ Includes issues handling</li>
+            </ul>
+            <div class="cta-row" style="margin-top:10px;">
+              <a class="btn ghost" href="/samples/validator-output-sample.csv" download>Download Output Sample</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="container section">
+      <div class="contact card">
+        <h2>Need your data validated before import?</h2>
+        <p class="muted">
+          Send the file + your required fields + any formatting rules. I’ll reply with scope, timeline, and price.
+        </p>
+
+        <div class="cta-row">
+          <a class="btn primary" href="/hire-me/">Hire Me</a>
+          <a class="btn ghost" href="mailto:Craig@crkdev.com?subject=Validator%20Engine%20Project%20Request">Email</a>
+          <a class="btn ghost" href="tel:+14103391935">Call: (410) 339-1935</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="container footer">
+    <div>© <span id="year"></span> CRK Dev LLC</div>
+    <div class="footer-right">
+      <a href="/case-studies/">Case Studies</a>
+      <a href="/hire-me/">Hire Me</a>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
