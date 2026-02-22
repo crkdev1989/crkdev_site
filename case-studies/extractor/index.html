@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Extractor Engine — Case Study | CRK Dev LLC</title>
+  <meta name="description" content="Case study: A Python-based extractor engine that isolates target fields from messy inputs and outputs clean, standardized CSV/JSON ready for automation." />
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+
+<body>
+  <!-- Shared Header -->
+  <header class="container header">
+    <div class="brand">
+      <a href="/" aria-label="CRK Dev Home">
+        <img src="/assets/logo4.png" alt="CRK Dev LLC Logo">
+      </a>
+    </div>
+
+    <nav class="nav">
+      <a href="/">Home</a>
+      <a href="/case-studies/" aria-current="page">Case Studies</a>
+      <a href="/portfolio/">Portfolio</a>
+      <a href="/hire-me/">Hire Me</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="container hero">
+      <div class="hero-copy">
+        <h1>Extractor Engine</h1>
+        <p class="subhead">
+          A modular Python extraction system that isolates target fields from messy datasets and semi-structured sources —
+          producing clean, standardized outputs ready for reporting, imports, or automation.
+        </p>
+
+        <div class="cta-row">
+          <a class="btn primary" href="/hire-me/">Request a Quote</a>
+          <a class="btn ghost" href="/case-studies/">Back to Case Studies</a>
+        </div>
+
+        <div class="trust">
+          <span>Clear scope</span>
+          <span>Reliable output</span>
+          <span>Fast turnaround</span>
+          <span>NDA-friendly</span>
+        </div>
+      </div>
+
+      <div class="hero-card">
+        <div class="card">
+          <div class="card-title">Deliverables</div>
+          <ul class="list">
+            <li>✅ Extracted dataset (CSV / JSON)</li>
+            <li>✅ Standardized headers + formatting</li>
+            <li>✅ Optional: transform rules (normalize fields)</li>
+            <li>✅ Summary of what was extracted</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- QUICK NAV -->
+    <section class="container section">
+      <div class="card">
+        <div class="cta-row">
+          <a class="btn ghost" href="#overview">Overview</a>
+          <a class="btn ghost" href="#demo">Demo</a>
+          <a class="btn ghost" href="#before-after">Before/After</a>
+          <a class="btn ghost" href="#results">Results</a>
+          <a class="btn ghost" href="#deliverables">Downloads</a>
+        </div>
+        <p class="muted" style="margin-top:10px;"></p>
+      </div>
+    </section>
+
+    <!-- OVERVIEW -->
+    <section id="overview" class="container section">
+      <h2>Overview</h2>
+      <div class="grid3">
+        <div class="card">
+          <h3>The Problem</h3>
+          <p>
+            Real-world datasets are messy: irrelevant columns, inconsistent formatting, mixed structures, and fields buried inside text.
+            Manual filtering is slow and error-prone.
+          </p>
+        </div>
+        <div class="card">
+          <h3>The Goal</h3>
+          <p>
+            Build a reusable extraction layer that isolates only the requested fields into a defined schema,
+            with consistent output that can plug into other workflows.
+          </p>
+        </div>
+        <div class="card">
+          <h3>The Solution</h3>
+          <p>
+            A Python Extractor Engine that extracts target fields, applies optional transforms, standardizes headers,
+            and outputs clean CSV/JSON with a brief summary.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHAT IT DOES -->
+    <section class="container section">
+      <h2>What the Extractor Does</h2>
+
+      <div class="card">
+        <div class="proof-grid" style="margin-top:6px;">
+          <div>
+            <div class="proof-label">Field Extraction</div>
+            <ul class="list">
+              <li>✅ Isolates only the fields the client needs</li>
+              <li>✅ Outputs to a defined schema (consistent columns)</li>
+              <li>✅ Handles missing fields safely (optional defaults)</li>
+              <li>✅ Preserves traceability (source references when applicable)</li>
+            </ul>
+          </div>
+
+          <div>
+            <div class="proof-label">Standardization</div>
+            <ul class="list">
+              <li>✅ Normalizes whitespace/casing (as needed)</li>
+              <li>✅ Cleans common formatting issues</li>
+              <li>✅ Produces consistent headers</li>
+              <li>✅ Ready for CRM/import/reporting workflows</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="proof-label" style="margin-top:14px;">Typical Outputs</div>
+        <ul class="list">
+          <li>✅ Clean CSV and/or JSON output</li>
+          <li>✅ Summary: rows processed, rows extracted, skipped/failed rows</li>
+          <li>✅ Optional: issues log (missing/invalid fields)</li>
+        </ul>
+
+        <p class="muted" style="margin-top:10px;">
+          Often paired with the <a href="/case-studies/validator/">CRK Dev Validator Engine</a> to enforce integrity before final export.
+        </p>
+      </div>
+    </section>
+
+    <!-- DEMO -->
+    <section id="demo" class="container section">
+      <h2>Demo Video</h2>
+      <div class="card">
+        <p class="muted">
+          This demo shows the Extractor Engine isolating fields into a clean schema, then running validation rules as the next step.
+        </p>
+
+        <div style="margin-top:12px;">
+          <div class="card" style="padding:0; overflow:hidden;">
+            <iframe
+              width="100%"
+              height="420"
+              src="https://www.youtube.com/embed/VIDEO_ID_HERE"
+              title="Extractor + Validator Demo"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+              style="display:block;"
+            ></iframe>
+          </div>
+        </div>
+
+        <div class="cta-row" style="margin-top:12px;">
+          <a class="btn ghost" href="/hire-me/">Want this for your project? →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- BEFORE / AFTER -->
+    <section id="before-after" class="container section">
+      <h2>Before / After</h2>
+      <div class="card">
+        <div class="proof-grid" style="margin-top:12px;">
+          <div>
+            <div class="proof-label">Before (Messy Input)</div>
+            <div class="card" style="margin-top:10px;">
+              <img
+                src="/assets/case-studies/extractor/before.png"
+                alt="Before: messy input data"
+                style="width:100%; height:auto; display:block; border-radius:12px;"
+              />
+            </div>
+          </div>
+
+          <div>
+            <div class="proof-label">After (Extracted Schema)</div>
+            <div class="card" style="margin-top:10px;">
+              <img
+                src="/assets/case-studies/extractor/after.png"
+                alt="After: extracted output schema"
+                style="width:100%; height:auto; display:block; border-radius:12px;"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RESULTS -->
+    <section id="results" class="container section">
+      <h2>Results</h2>
+
+      <div class="grid3">
+        <div class="card">
+          <h3>Speed</h3>
+          <p>Transforms raw inputs into a structured dataset far faster than manual filtering.</p>
+        </div>
+        <div class="card">
+          <h3>Consistency</h3>
+          <p>Standardized schema and formatting keep output predictable across runs.</p>
+        </div>
+        <div class="card">
+          <h3>Reusability</h3>
+          <p>Extraction rules can be reused as new files arrive or scope expands.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- DOWNLOADS -->
+    <section id="deliverables" class="container section">
+      <h2>Downloads</h2>
+
+      <div class="card">
+        <div class="proof-grid" style="margin-top:12px;">
+          <div>
+            <div class="proof-label">Case Study PDF</div>
+            <ul class="list">
+              <li>✅ Printable documentation version</li>
+              <li>✅ Overview + workflow + use cases</li>
+            </ul>
+            <div class="cta-row" style="margin-top:10px;">
+              <a class="btn ghost" href="/assets/case-studies/extractor/extractor-case-study.pdf" download>Download PDF</a>
+            </div>
+          </div>
+
+          <div>
+            <div class="proof-label">Sample Output</div>
+            <ul class="list">
+              <li>✅ Example extracted CSV/JSON</li>
+              <li>✅ Demonstrates schema-driven output</li>
+            </ul>
+            <div class="cta-row" style="margin-top:10px;">
+              <a class="btn ghost" href="/samples/extractor-output-sample.csv" download>Download Output Sample</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="container section">
+      <div class="contact card">
+        <h2>Need data extracted from messy sources?</h2>
+        <p class="muted">
+          Send the input + the fields you need + your output format (CSV/Excel/JSON). I’ll reply with scope, timeline, and price.
+        </p>
+
+        <div class="cta-row">
+          <a class="btn primary" href="/hire-me/">Hire Me</a>
+          <a class="btn ghost" href="mailto:Craig@crkdev.com?subject=Extractor%20Engine%20Project%20Request">Email</a>
+          <a class="btn ghost" href="tel:+14103391935">Call: (410) 339-1935</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="container footer">
+    <div>© <span id="year"></span> CRK Dev LLC</div>
+    <div class="footer-right">
+      <a href="/case-studies/">Case Studies</a>
+      <a href="/hire-me/">Hire Me</a>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
