@@ -250,13 +250,61 @@ a:hover{
   gap:14px;
 }
 
-.grid3 h3{
+.grid2{
+  display:grid;
+  grid-template-columns: repeat(2, minmax(0,1fr));
+  gap:14px;
+}
+
+.grid3 h3,
+.grid2 h3{
   margin:0 0 8px;
 }
 
-.grid3 p{
+.grid3 p,
+.grid2 p{
   margin:0;
   color:var(--muted);
+}
+
+/* TOOLS */
+
+.tools-grid{
+  margin-top:14px;
+}
+
+.tool-card{
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+  transition: transform .18s ease, border-color .18s ease, background .18s ease;
+}
+
+.tool-card:hover{
+  opacity:1;
+  transform: translateY(-3px);
+  border-color: rgba(96,165,250,.28);
+  background: rgba(17,24,39,.9);
+}
+
+.tool-label{
+  display:inline-flex;
+  align-self:flex-start;
+  padding:6px 10px;
+  border-radius:999px;
+  border:1px solid rgba(96,165,250,.22);
+  background: rgba(96,165,250,.10);
+  color:var(--accent);
+  font-size:.78rem;
+  font-weight:800;
+  letter-spacing:.04em;
+  text-transform:uppercase;
+}
+
+.tool-link{
+  margin-top:auto;
+  font-weight:800;
+  color:var(--text);
 }
 
 /* STEP CIRCLES */
@@ -315,11 +363,18 @@ a:hover{
   border-top:1px solid var(--border);
   padding-top:16px;
   padding-bottom:26px;
+  gap:16px;
+  flex-wrap:wrap;
 }
 
 .footer-right{
   display:flex;
   gap:12px;
+  flex-wrap:wrap;
+}
+
+.footer-note{
+  width:100%;
 }
 
 /* ACCORDION */
@@ -390,7 +445,8 @@ a:hover{
     width:100%;
   }
 
-  .grid3{
+  .grid3,
+  .grid2{
     grid-template-columns: 1fr;
   }
 
