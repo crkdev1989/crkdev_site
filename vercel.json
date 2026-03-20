@@ -1,12 +1,8 @@
 {
   "redirects": [
     {
-      "source": "http://crkdev.com/:path*",
-      "destination": "https://www.crkdev.com/:path*",
-      "permanent": true
-    },
-    {
-      "source": "https://crkdev.com/:path*",
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "crkdev.com" }],
       "destination": "https://www.crkdev.com/:path*",
       "permanent": true
     }
