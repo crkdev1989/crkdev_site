@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Blog — CRK Dev</title>
+  <meta name="description" content="Notes from the build — updates and writing from CRK Dev." />
+
+  <link rel="stylesheet" href="/styles.css" />
+  <style>
+    .blog-post-list {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      margin-top: 18px;
+      max-width: 62ch;
+    }
+    .blog-post-card .blog-post-title {
+      font-size: 1.35rem;
+      font-weight: 800;
+      margin: 0 0 8px;
+      line-height: 1.25;
+    }
+    .blog-post-card .blog-post-title a {
+      color: var(--text);
+      border-bottom: 1px dotted rgba(46, 169, 230, 0.35);
+    }
+    .blog-post-card .blog-post-title a:hover {
+      color: var(--accent);
+      opacity: 1;
+    }
+    .blog-post-card .blog-post-meta {
+      font-size: 0.9rem;
+      color: var(--muted);
+      margin: 0 0 10px;
+    }
+    .blog-post-card .blog-post-excerpt {
+      color: var(--muted);
+      margin: 0 0 12px;
+    }
+    .blog-post-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .blog-post-tags li {
+      display: inline-flex;
+    }
+    .blog-tag {
+      display: inline-flex;
+      align-items: center;
+      padding: 6px 10px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: rgba(255, 255, 255, 0.03);
+      color: var(--muted);
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.03em;
+    }
+  </style>
+</head>
+
+<body>
+  <header class="container header">
+    <div class="brand">
+      <a href="/" aria-label="CRK Dev Home">
+        <img src="/assets/logo4.png" alt="CRK Dev LLC Logo">
+      </a>
+    </div>
+
+    <nav class="nav">
+      <a href="/">Home</a>
+      <a href="/blog/" aria-current="page">Blog</a>
+      <a href="/tools/">Tools</a>
+      <a href="/case-studies/">Case Studies</a>
+      <a href="/portfolio/">Portfolio</a>
+      <a href="/hire-me/">Hire Me</a>
+      <a href="/about/">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="container section">
+      <p class="eyebrow">CRK Dev</p>
+      <h1>Notes from the Build</h1>
+
+      <div id="blog-posts" class="blog-post-list" aria-live="polite"></div>
+      <p id="blog-posts-error" class="muted" hidden>Could not load posts. Please try again later.</p>
+    </section>
+  </main>
+
+  <footer class="container footer">
+    <div>© <span id="year"></span> CRK Dev LLC</div>
+
+    <div class="footer-right">
+      <a href="/tools/">Tools</a>
+      <a href="https://csv.crkdev.com" target="_blank" rel="noopener">Launch CSV Cleaner</a>
+      <a href="https://spectral.crkdev.com" target="_blank" rel="noopener">Spectral</a>
+      <a href="/hire-me/">Hire Me</a>
+      <a href="/case-studies/">Case Studies</a>
+      <a href="mailto:craig@crkdev.com">craig@crkdev.com</a>
+      <a href="tel:+14103391935">(410) 339-1935</a>
+    </div>
+
+    <div class="footer-note">
+      © CRK Dev LLC — craig@crkdev.com · (410) 339-1935 · If you found me through Upwork, please keep project communication there per their Terms of Service.
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    (function () {
+      var container = document.getElementById("blog-posts");
+      var errEl = document.getElementById("blog-posts-error");
+
+      function esc(s) {
+        if (s == null) return "";
+        return String(s)
+          .replace(/&/g, "&amp;")
+          .replace(/</g, "&lt;")
+          .replace(/>/g, "&gt;")
+          .replace(/"/g, "&quot;");
+      }
+
+      function attr(s) {
+        return String(s).replace(/&/g, "&amp;").replace(/"/g, "&quot;");
+      }
+
+      fetch("posts.json")
+        .then(function (r) {
+          if (!r.ok) throw new Error("bad status");
+          return r.json();
+        })
+        .then(function (posts) {
+          if (!Array.isArray(posts) || posts.length === 0) {
+            container.innerHTML = "";
+            return;
+          }
+          container.innerHTML = posts
+            .map(function (post) {
+              var slug = (post.slug && String(post.slug).trim()) || "";
+              var href = slug
+                ? "/blog/posts/" + encodeURIComponent(slug) + ".html"
+                : "#";
+              var title = post.title != null ? String(post.title) : "";
+              var date = post.date != null ? String(post.date) : "";
+              var excerpt = post.excerpt != null ? String(post.excerpt) : "";
+              var tags = Array.isArray(post.tags) ? post.tags : [];
+              var tagItems = tags
+                .filter(function (t) {
+                  return t != null && String(t).trim() !== "";
+                })
+                .map(function (t) {
+                  return '<li><span class="blog-tag">' + esc(t) + "</span></li>";
+                })
+                .join("");
+
+              return (
+                '<article class="card blog-post-card">' +
+                '<h2 class="blog-post-title"><a href="' +
+                attr(href) +
+                '">' +
+                esc(title) +
+                "</a></h2>" +
+                (date ? '<p class="blog-post-meta">' + esc(date) + "</p>" : "") +
+                (excerpt
+                  ? '<p class="blog-post-excerpt">' + esc(excerpt) + "</p>"
+                  : "") +
+                (tagItems
+                  ? '<ul class="blog-post-tags">' + tagItems + "</ul>"
+                  : "") +
+                "</article>"
+              );
+            })
+            .join("");
+        })
+        .catch(function () {
+          errEl.hidden = false;
+        });
+    })();
+  </script>
+</body>
+</html>

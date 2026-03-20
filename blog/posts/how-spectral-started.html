@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>How Spectral Started — CRK Dev Blog</title>
+  <meta name="description" content="I built a config-driven data pipeline called Spectral from scratch. Here's what it actually took — the scraper, the cleaner, the dead ends, and what's live now." />
+
+  <link rel="stylesheet" href="/styles.css" />
+  <style>
+    .blog-post-inner {
+      max-width: 680px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .blog-post-inner h1 {
+      font-size: clamp(1.65rem, 3.5vw, 2.35rem);
+      line-height: 1.15;
+      margin: 0 0 12px;
+    }
+    .blog-byline {
+      margin: 0 0 28px;
+    }
+    .blog-post-body p {
+      margin: 0 0 1.1em;
+    }
+    .blog-post-body p:last-child {
+      margin-bottom: 0;
+    }
+    .blog-post-cta {
+      margin-top: 28px;
+      margin-bottom: 8px;
+    }
+    .blog-back {
+      margin-top: 22px;
+    }
+  </style>
+</head>
+
+<body>
+  <header class="container header">
+    <div class="brand">
+      <a href="/" aria-label="CRK Dev Home">
+        <img src="/assets/logo4.png" alt="CRK Dev LLC Logo">
+      </a>
+    </div>
+
+    <nav class="nav">
+      <a href="/">Home</a>
+      <a href="/blog/">Blog</a>
+      <a href="/tools/">Tools</a>
+      <a href="/case-studies/">Case Studies</a>
+      <a href="/portfolio/">Portfolio</a>
+      <a href="/hire-me/">Hire Me</a>
+      <a href="/about/">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <article class="container section">
+      <div class="blog-post-inner">
+        <p class="eyebrow">Behind the Build</p>
+        <h1>I Built a Live Data Pipeline From Scratch — Here's How Spectral Started</h1>
+        <p class="muted blog-byline">Craig Kelley · March 20, 2026</p>
+
+        <div class="blog-post-body">
+          <p>I spent 23 years in underground utilities and infrastructure contracting. Field work, long days, physical wear — that was my world.</p>
+
+          <p>My body has limits. I knew that before the job did. So I started teaching myself to code to build a way out before I hit them.</p>
+
+          <p>The first thing I shipped that wasn’t a toy was a cold email system in Python: SMTP, personalization tokens, deduplication so the same lead didn’t get hammered, basic guardrails. It worked. Someone paid me for it.</p>
+
+          <p>That unlocked something. I didn’t want another one-off script — I wanted a real pipeline: scrape sources, enrich what mattered, verify it, clean it, and hand back structured data someone could use.</p>
+
+          <p>I called it <strong>Spectral</strong>. Config-driven, modular, built as a monorepo: a scraper, an enrichment layer, a verification step, and a CSV cleaner that could take messy input and make it consistent.</p>
+
+          <p>The goal was always two-fold: run it as a service engine for client jobs, and eventually sell packaged lead lists as a data product. Same core, different packaging.</p>
+
+          <p>There were dead ends — approaches that looked right until scale or edge cases broke them. I won’t pretend it was a straight line. But the stack settled: a <strong>FastAPI</strong> backend, deployed on a <strong>VPS</strong>, with the pipeline wired so jobs could move through it end to end.</p>
+
+          <p>It’s live now at <a href="https://spectral.crkdev.com" target="_blank" rel="noopener">spectral.crkdev.com</a>. Upload a file or point it at a URL, run the flow, download results. That’s the product in one sentence.</p>
+
+          <p>This post is the first in a series where I document what I build next — the features, the tradeoffs, and what actually ships.</p>
+        </div>
+
+        <div class="blog-post-cta cta-row">
+          <a class="btn primary" href="/hire-me/">Work with CRK Dev</a>
+          <a class="btn ghost" href="https://spectral.crkdev.com" target="_blank" rel="noopener">Open Spectral</a>
+        </div>
+
+        <p class="blog-back">
+          <a class="btn ghost" href="/blog/">← Back to Blog</a>
+        </p>
+      </div>
+    </article>
+  </main>
+
+  <footer class="container footer">
+    <div>© <span id="year"></span> CRK Dev LLC</div>
+
+    <div class="footer-right">
+      <a href="/tools/">Tools</a>
+      <a href="https://csv.crkdev.com" target="_blank" rel="noopener">Launch CSV Cleaner</a>
+      <a href="https://spectral.crkdev.com" target="_blank" rel="noopener">Spectral</a>
+      <a href="/hire-me/">Hire Me</a>
+      <a href="/case-studies/">Case Studies</a>
+      <a href="mailto:craig@crkdev.com">craig@crkdev.com</a>
+      <a href="tel:+14103391935">(410) 339-1935</a>
+    </div>
+
+    <div class="footer-note">
+      © CRK Dev LLC — craig@crkdev.com · (410) 339-1935 · If you found me through Upwork, please keep project communication there per their Terms of Service.
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

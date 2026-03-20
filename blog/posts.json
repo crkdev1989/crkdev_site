@@ -1,0 +1,9 @@
+[
+  {
+    "title": "I Built a Live Data Pipeline From Scratch — Here's How Spectral Started",
+    "date": "2026-03-20",
+    "excerpt": "From a utility script to a config-driven scraping and cleaning pipeline running in production. This is what it actually took.",
+    "tags": ["spectral", "data pipelines", "behind the build"],
+    "slug": "how-spectral-started"
+  }
+]
