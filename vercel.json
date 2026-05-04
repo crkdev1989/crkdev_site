@@ -1,4 +1,8 @@
 {
+  "rewrites": [
+    { "source": "/data", "destination": "/data-products.html" },
+    { "source": "/data/", "destination": "/data-products.html" }
+  ],
   "redirects": [
     {
       "source": "/:path*",
