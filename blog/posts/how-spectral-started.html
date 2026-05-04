@@ -7,37 +7,10 @@
   <meta name="description" content="I built a config-driven data pipeline called Spectral from scratch. Here's what it actually took — the scraper, the cleaner, the dead ends, and what's live now." />
 
   <link rel="stylesheet" href="/styles.css" />
-  <style>
-    .blog-post-inner {
-      max-width: 680px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    .blog-post-inner h1 {
-      font-size: clamp(1.65rem, 3.5vw, 2.35rem);
-      line-height: 1.15;
-      margin: 0 0 12px;
-    }
-    .blog-byline {
-      margin: 0 0 28px;
-    }
-    .blog-post-body p {
-      margin: 0 0 1.1em;
-    }
-    .blog-post-body p:last-child {
-      margin-bottom: 0;
-    }
-    .blog-post-cta {
-      margin-top: 28px;
-      margin-bottom: 8px;
-    }
-    .blog-back {
-      margin-top: 22px;
-    }
-  </style>
 </head>
 
 <body>
+  <script>try{if(localStorage.getItem("crkdev-theme")==="light")document.body.classList.add("theme-light");}catch(e){}</script>
   <header class="container header">
     <div class="brand">
       <a href="/" aria-label="CRK Dev Home">
@@ -54,6 +27,7 @@
       <a href="/portfolio/">Portfolio</a>
       <a href="/hire-me/">Hire Me</a>
       <a href="/about/">About</a>
+      <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Switch to light mode" aria-pressed="false"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg></button>
     </nav>
   </header>
 
@@ -117,5 +91,6 @@
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
+  <script src="/theme.js"></script>
 </body>
 </html>
